@@ -2,7 +2,7 @@
 <?php include "assest/head.php"; ?>
 <?php
 
-// Get Latest articles
+// Get Latest articles by ID
 $stmt = $conn->prepare("SELECT * FROM `article` INNER JOIN category ON id_categorie=category_id ORDER BY `article_created_time` DESC  LIMIT 9");
 $stmt->execute();
 $articles = $stmt->fetchAll();
